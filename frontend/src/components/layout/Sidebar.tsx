@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   LayoutDashboard,
@@ -9,12 +9,13 @@ import {
   Shield,
   ChevronLeft,
   ChevronRight,
+  Home,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/rules", icon: Scale, label: "Rule Management" },
   { to: "/compliance-check", icon: CheckCircle2, label: "Transaction Check" },
   { to: "/reports", icon: FileText, label: "Reports" },
@@ -35,7 +36,7 @@ export function Sidebar() {
       )}
     >
       {/* Logo */}
-      <div className="h-16 flex items-center justify-between px-4 border-b border-sidebar-border">
+      <Link to="/" className="h-16 flex items-center justify-between px-4 border-b border-sidebar-border hover:bg-sidebar-accent/50 transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
             <Shield className="w-5 h-5 text-primary-foreground" />
@@ -62,7 +63,7 @@ export function Sidebar() {
         >
           {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
         </button>
-      </div>
+      </Link>
 
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-1">
