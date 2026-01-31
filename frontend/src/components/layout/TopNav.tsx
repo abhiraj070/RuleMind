@@ -23,18 +23,6 @@ export function TopNav({ title, subtitle }: TopNavProps) {
 
       {/* Right section */}
       <div className="flex items-center gap-4">
-        {/* Search */}
-        <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg">
-          <Search size={16} className="text-muted-foreground" />
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-transparent border-none outline-none text-sm w-48 placeholder:text-muted-foreground"
-          />
-          <kbd className="hidden lg:inline-flex items-center gap-1 px-2 py-0.5 text-xs text-muted-foreground bg-background rounded border">
-            ⌘K
-          </kbd>
-        </div>
 
         {/* Notifications */}
         <button className="relative p-2 rounded-lg hover:bg-secondary transition-colors">
