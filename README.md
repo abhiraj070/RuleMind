@@ -129,5 +129,3 @@ Ensures regulatory traceability and accountability.
 
 ---
 
-## System Architecture Overview
-
